@@ -4,6 +4,8 @@ datasets/*
 output/*
 !output/.gitkeep
 *.Rproj
+*.csv
+*.txt
 #
 #git ignore for R
 #
