@@ -1,11 +1,16 @@
-#Leer CSV 
-pauta2014 <- read.csv(file="../datasets/pauta-oficial-2014.csv", header=TRUE, sep=",")
-pauta2017_2 <- read.csv(file="../datasets/pauta-oficial-segundo-semestre-2017.csv", header=TRUE, sep=",")
-s <- summary(pauta2014)
-capture.output(s, file = "../output/summary_pauta2014.txt")
+source('lectura_datasets.R')
 
-s <- summary(pauta2017_2)
-capture.output(s, file = "../output/summary_pauta2017_2.txt")
-#summary(pauta2017_2)
-
-
+s2014 <- summary(pauta2014)
+capture.output(s2014, file = "../output/summary_pauta2014.txt")
+s2015 <- summary(pauta2015)
+capture.output(s2015, file = "../output/summary_pauta2015.txt")
+s2017_2 <- summary(pauta2017_2)
+capture.output(s2017_2, file = "../output/summary_pauta2017_2.txt")
+s2016_1 <- summary(pauta2016_1)
+capture.output(s2016_1, file = "../output/summary_pauta2016_1.txt")
+s2016_2 <- summary(pauta2016_2)
+capture.output(s2016_2, file = "../output/summary_pauta2016_2.txt")
+s2018_1 <- summary(pauta2018_1)
+capture.output(s2018_1, file = "../output/summary_pauta2018_1.txt")
+s2017_1 <- summary(pauta2017_1)
+capture.output(s2017_1, file = "../output/summary_pauta2017_1.txt")
