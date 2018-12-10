@@ -1,6 +1,7 @@
 datasets/*
 .idea
-
+output/*
+*.Rproj
 #
 #git ignore for R
 #
@@ -117,3 +118,4 @@ venv.bak/
 .mypy_cache/
 
 
+.Rproj.user
