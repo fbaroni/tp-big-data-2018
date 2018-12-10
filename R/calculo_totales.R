@@ -19,17 +19,22 @@ obtener_10_primeros_medios_proporcion <- function(dataframe) {
   
   proporcion_ordenado <- proporcion[order(-proporcion$x),]
   
-  return(head(proporcion_ordenado, 15))
+  return(head(proporcion_ordenado, 25))
 }
 
 medios2014 <- obtener_10_primeros_medios_proporcion(pauta2014)
-# names(medios2014) <- c('medio2014', 'proporcion2014')
+names(medios2014) <- c('medio2014', 'anio2014')
 medios2015 <- obtener_10_primeros_medios_proporcion(pauta2015)
+names(medios2015) <- c('medio2015', 'anio2015')
 medios2016_1 <- obtener_10_primeros_medios_proporcion(pauta2016_1)
+names(medios2016_1) <- c('medios2016_1', 'semestre2016_1')
 medios2016_2 <- obtener_10_primeros_medios_proporcion(pauta2016_2)
+names(medios2016_2) <- c('medios2016_2', 'semestre2016_2')
 medios2017_1 <- obtener_10_primeros_medios_proporcion(pauta2017_1)
+names(medios2017_1) <- c('medios2017_1', 'semestre2017_1')
 medios2017_2 <- obtener_10_primeros_medios_proporcion(pauta2017_2)
+names(medios2017_2) <- c('medios2017_2', 'semestre2017_2')
 medios2018_1 <- obtener_10_primeros_medios_proporcion(pauta2018_1)
-
+names(medios2018_1) <- c('medios2018_1', 'semestre2018_1')
 proporcion_10_medios <- data.frame(medios2014, medios2015, medios2016_1, medios2016_2, medios2017_1, medios2018_1)
-print(proporcion_10_medios)
+write.csv(proporcion_10_medios, file = "proporcion_medios.csv")
