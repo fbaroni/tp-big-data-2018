@@ -6,10 +6,8 @@ output/*
 *.Rproj
 *.csv
 *.txt
-#
-#git ignore for R
-#
-
+.Rhistory
+.RData
 
 
 #
