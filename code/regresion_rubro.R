@@ -19,5 +19,8 @@ regresion_cable <- lm(Cable ~ tiempo, data = rubros_semestrales_tiempo)
 regresion_web <- lm(Web ~ tiempo, data = rubros_semestrales_tiempo)
 regresion_cine <- lm(Cine ~ tiempo, data = rubros_semestrales_tiempo)
 
-
-summary(regresion_grafica)
+functionGrafica<-function(tiempo){regresion_grafica$coefficients[2]*tiempo+regresion_grafica$coefficients[1]}
+print(functionGrafica(2018.5))
+# plot(functionGrafica,1,2018.5)
+# points(rubros_semestrales_tiempo$tiempo,rubros_semestrales_tiempo$Grafica)
+# # summary(regresion_grafica)
