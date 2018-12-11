@@ -56,4 +56,4 @@ obtener_archvo_rubro_proporcion <- function(dataframe, filename) {
   
   write.csv(by_grupo_suma, file = filename)
 }
-obtener_archvo_rubro_proporcion(pauta2017_1, 'rubro_2017_1.csv')
+obtener_archvo_rubro_proporcion(pauta2017_2, 'rubro_2017_2.csv')
