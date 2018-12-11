@@ -10,4 +10,4 @@ rubros_duplicado_2015 <- cbind(rubros_duplicado_2014[1:4],  rubros_duplicado_201
 names(rubros_duplicado_2015)[4] <- 'X2015.1'
 names(rubros_duplicado_2015)[5] <- 'X2015.2'
 
-write.csv(rubros_duplicado_2015, file = "../datasets/rubros-semestres.csv")
+write.csv(rubros_duplicado_2015, file = "../datasets/rubros-semestrales.csv")
