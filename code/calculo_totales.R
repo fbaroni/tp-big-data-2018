@@ -25,8 +25,6 @@ obtener_6_primeros_medios_proporcion <- function(dataframe) {
 
 graficar <- function(dataframe){
   
-  # plot(dataframe$proporcion, dataframe$medio)
-  # plot(dataframe$proporcion, dataframe$medio, type = "b")
   grafico<-ggplot(data=dataframe, aes(x=medio, y=proporcion)) + geom_bar(stat="identity")
   grafico
 }
@@ -34,22 +32,3 @@ graficar <- function(dataframe){
 medios2014 <- obtener_6_primeros_medios_proporcion(pauta2018_1)
 names(medios2014) <- c('medio', 'proporcion')
 graficar(medios2014)
-
-# medios2015 <- obtener_10_primeros_medios_proporcion(pauta2015)
-# names(medios2015) <- c('medio', 'proporcion')
-# medios2016_1 <- obtener_10_primeros_medios_proporcion(pauta2016_1)
-# names(medios2016_1) <- c('medio', 'proporcion')
-# medios2016_2 <- obtener_10_primeros_medios_proporcion(pauta2016_2)
-# names(medios2016_2) <- c('medio', 'proporcion')
-# medios2017_1 <- obtener_10_primeros_medios_proporcion(pauta2017_1)
-# names(medios2017_1) <- c('medio', 'proporcion')
-# medios2017_2 <- obtener_10_primeros_medios_proporcion(pauta2017_2)
-# names(medios2017_2) <- c('medio', 'proporcion')
-# medios2018_1 <- obtener_10_primeros_medios_proporcion(pauta2018_1)
-# names(medios2018_1) <- c('medio', 'proporcion')
-# proporcion_10_medios <- data.frame(medios2014, medios2015, medios2016_1, medios2016_2, medios2017_1, medios2018_1)
-# write.csv(proporcion_10_medios, file = "proporcion_medios.csv")
-
-
-
-

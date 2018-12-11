@@ -33,12 +33,10 @@ valorViaPublica <- obtenerPrediccionTiempo(regresion_viapublica, 2018.5)
 valorCine <- obtenerPrediccionTiempo(regresion_cine, 2018.5)
 valorWeb <- obtenerPrediccionTiempo(regresion_web, 2018.5)
 
-valores_predichos <- c(valorGrafica, valorTv, valorRadio, valorViaPublica, valorCable, valorWeb, valorCine)
+valores_predichos <- c(2018.5, valorGrafica, valorTv, valorRadio, valorViaPublica, valorCable, valorWeb, valorCine)
 
-print(valores_predichos)
-rubros_semestrales_predichos <- cbind.data.frame(valores_predichos, rubros_semestrales_tiempo)
+rubros_semestrales_predichos <- rbind.data.frame(rubros_semestrales_tiempo, valores_predichos)
 
-print(rubros_semestrales_predichos)
-# plot(functionGrafica,1,2018.5)
-# points(rubros_semestrales_tiempo$tiempo,rubros_semestrales_tiempo$Grafica)
-# # summary(regresion_grafica)
+write.csv(rubros_semestrales_predichos, file = "../datasets/prediccion-por-semestres.csv")
+
+#TODO grafica serie de tiempo
